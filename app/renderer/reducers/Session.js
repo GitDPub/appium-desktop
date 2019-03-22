@@ -32,7 +32,22 @@ const INITIAL_STATE = {
   savedSessions: [],
   tabKey: 'new',
   serverType: ServerTypes.local,
-  server,
+  server: {
+    local: {},
+    remote: {},
+    sauce: {
+      dataCenter: 'us-west-1',
+    },
+    testobject: {
+      dataCenter: 'US',
+    },
+    headspin: {},
+    browserstack: {},
+    advanced: {},
+    bitbar: {},
+    kobiton: {},
+    perfecto: {},
+  },
   visibleProviders,
   attachSessId: null,
 
