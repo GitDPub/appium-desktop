@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Row, Col, Input, Checkbox, Radio } from 'antd';
+import { t } from '../../../configs/i18next.config';
 import SessionStyles from './Session.css';
 const FormItem = Form.Item;
 
@@ -34,8 +35,8 @@ export default class ServerTabSauce extends Component {
           <FormItem>
             <div className={['ant-input-group-addon', SessionStyles.addonDataCenter].join(' ') }>Saucelabs Data Center</div>
             <Radio.Group className={SessionStyles.inputDataCenter} buttonStyle="solid" defaultValue='us-west-1' id='sauceObjectDataCenter' value={server.sauce.dataCenter} onChange={(e) => setServerParam('dataCenter', e.target.value)}>
-              <Radio value='us-west-1'>US</Radio>
-              <Radio value='eu-central-1'>EU</Radio>
+              <Radio value='us-west-1'>{t('US')}</Radio>
+              <Radio value='eu-central-1'>{t('EU')}</Radio>
             </Radio.Group>
           </FormItem>
         </Col>
